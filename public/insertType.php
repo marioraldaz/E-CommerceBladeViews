@@ -13,6 +13,6 @@
         echo $blade->view()->make('viewInsertType', ['titulo'=>'Gestionar Libros'])->render();
 
         if(isset($_POST['submit'])){
-            $type = new Category($_POST['name']);
-            $type->insert();
+            $product = new Category($_POST['name']);
+            $product->insert();
         }

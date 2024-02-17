@@ -17,7 +17,7 @@ use Mario\Commerce\DBConnection;
         }
 
         public function insert(){
-            $query = "INSERT INTO products (name, description, price, category_id, created_at)
+            $query = "INSERT INTO products (name, description, price, category_id)
              VALUES ('$this->name', '$this->description', '$this->price', '$this->category_id')";       
              $statement = DBConnection::$connection->prepare($query);
              $success = $statement->execute();

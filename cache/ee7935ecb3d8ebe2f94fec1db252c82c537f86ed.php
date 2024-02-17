@@ -7,8 +7,8 @@
 
         <label for="parent_category_id">Type of product:</label><br>
         <select name="parent_category_id" id="parent_category_id">
-            <?php $__currentLoopData = $types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $type): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <option value="<?php echo e($type['category_id']); ?>"><?php echo e($type['name']); ?></option>
+            <?php $__currentLoopData = $types; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <option value="<?php echo e($product['category_id']); ?>"><?php echo e($product['name']); ?></option>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </select>
 

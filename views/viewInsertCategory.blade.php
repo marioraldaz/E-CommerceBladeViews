@@ -9,8 +9,8 @@
 
         <label for="parent_category_id">Type of product:</label><br>
         <select name="parent_category_id" id="parent_category_id">
-            @foreach ($types as $type)
-                <option value="{{ $type['category_id'] }}">{{ $type['name'] }}</option>
+            @foreach ($types as $product)
+                <option value="{{ $product['category_id'] }}">{{ $product['name'] }}</option>
             @endforeach
         </select>
 

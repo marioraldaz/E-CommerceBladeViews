@@ -35,5 +35,9 @@
             return $statement->fetchAll();
         }
 
-
+        public static function getCategories(){
+            $statement = DBConnection::$connection->prepare("SELECT * FROM categories");
+            $statement->execute();
+            return $statement->fetchAll();
+        }
     }

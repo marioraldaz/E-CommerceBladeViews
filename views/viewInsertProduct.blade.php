@@ -13,12 +13,13 @@
         <label for="price">Price:</label><br>
         <input type="number" id="price" name="price"><br>
 
-        <label for="category_id">Category ID:</label><br>
-        <input type="number" id="category_id" name="category_id"><br>
-
-        <label for="product_id">Product ID:</label><br>
-        <input type="number" id="product_id" name="product_id"><br>
-
-        <input type="submit" value="Submit">
+        <label for="category_id">Category</label><br>
+        <select id="category_id" name="category_id">
+            @foreach ($categories as $category)
+                <option value="{{ $category['category_id'] }}">{{ $category['name'] }}</option>
+            @endforeach
+        </select>
+        <br>
+        <input type="submit" name="submit" value="Submit">
     </form>
 @endsection
