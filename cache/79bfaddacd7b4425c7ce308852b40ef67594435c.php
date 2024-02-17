@@ -1,4 +1,4 @@
-<?php $__env->startSection('title'); ?>
+<?php $__env->startSection('title', 'Add User'); ?>
 
 <?php $__env->startSection('content'); ?>
     <form action="" method="post">

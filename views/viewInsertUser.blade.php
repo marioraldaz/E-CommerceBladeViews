@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title')
+@section('title', 'Add User')
 
 @section('content')
     <form action="" method="post">
