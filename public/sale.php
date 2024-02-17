@@ -35,12 +35,13 @@
     }
 
     if(isset($_POST['product_to_add'])){
-        var_dump($_POST['product_to_add']);
-        var_dump($_SESSION['cart']);
+        
+        header("refresh:0");
+
         if (array_key_exists($_POST['product_to_add'], $_SESSION['cart'])) {
-            $_SESSION['cart'][$_POST['product_to_add']]=1;
+            $_SESSION['cart']["$_POST[product_to_add]"]++;
         } else {
-            $_SESSION['cart'][$_POST['product_to_add']]=$_POST['product_to_add']+1;
+            $_SESSION['cart']["$_POST[product_to_add]"]=1;
         }
     }
 

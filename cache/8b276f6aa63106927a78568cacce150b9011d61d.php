@@ -22,8 +22,8 @@
                     <td>No Image</td>
                     <td><?php echo e($product['created_at']); ?></td>
                     <td><?php echo e($product['amount']); ?></td>
-                    <td><input type="submit" value="<?php echo e($product['product_id']); ?>" name="product_to_remove">Remove From
-                        Cart</a>
+                    <td><button type="submit" value="<?php echo e($product['product_id']); ?>" name="product_to_remove">Remove From
+                            Cart</button>
                     </td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -47,7 +47,8 @@
                     <td><?php echo e($categories["$product[category_id]"]); ?></td>
                     <td>No Image</td>
                     <td><?php echo e($product['created_at']); ?></td>
-                    <td><input type="submit" value="<?php echo e("$product[product_id]"); ?>" name="product_to_add">
+                    <td><button type="submit" value="<?php echo e("$product[product_id]"); ?>" name="product_to_add">Add To
+                            Cart</button>
                     </td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

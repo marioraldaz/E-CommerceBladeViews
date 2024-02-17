@@ -24,8 +24,8 @@
                     <td>No Image</td>
                     <td>{{ $product['created_at'] }}</td>
                     <td>{{ $product['amount'] }}</td>
-                    <td><input type="submit" value="{{ $product['product_id'] }}" name="product_to_remove">Remove From
-                        Cart</a>
+                    <td><button type="submit" value="{{ $product['product_id'] }}" name="product_to_remove">Remove From
+                            Cart</button>
                     </td>
                 </tr>
             @endforeach
@@ -49,7 +49,8 @@
                     <td>{{ $categories["$product[category_id]"] }}</td>
                     <td>No Image</td>
                     <td>{{ $product['created_at'] }}</td>
-                    <td><input type="submit" value="{{ "$product[product_id]" }}" name="product_to_add">
+                    <td><button type="submit" value="{{ "$product[product_id]" }}" name="product_to_add">Add To
+                            Cart</button>
                     </td>
                 </tr>
             @endforeach
