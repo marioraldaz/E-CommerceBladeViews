@@ -21,7 +21,7 @@
                     <td><?php echo e($categories["$product[category_id]"]); ?></td>
                     <td>No Image</td>
                     <td><?php echo e($product['created_at']); ?></td>
-                    <td><a href="./modifyProduct">Modify Product</a></td>
+                    <td><a href="./modifyProduct?id=<?php echo e($product['product_id']); ?>>">Modify Product</a></td>
                 </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </table>

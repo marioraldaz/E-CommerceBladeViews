@@ -35,6 +35,17 @@
             return $statement->fetchAll();
         }
 
+        public static function getCategoriesAssociative(){
+            $statement = DBConnection::$connection->prepare("SELECT * FROM categories");
+            $statement->execute();
+            $categories=$statement->fetchAll();
+            $newCategories=[];
+            foreach ($categories as $category){
+                $newCategories[$category['category_id']] = $category['name'];
+            }
+            return $newCategories;
+        }
+
         public static function getCategories(){
             $statement = DBConnection::$connection->prepare("SELECT * FROM categories");
             $statement->execute();

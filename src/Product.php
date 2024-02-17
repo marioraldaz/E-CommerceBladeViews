@@ -38,4 +38,33 @@ use PDO;
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             return $result;    
         }
+
+        public static function getProductById($id){
+            $statement = DBConnection::$connection->prepare("SELECT * FROM products WHERE product_id = :id");
+            $statement->bindParam(':id',$id);
+            $success = $statement->execute();
+
+            if(!$success){
+                echo "Error getting products";
+            }
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result[0];    
+        }
+
+        public static function updateProduct($product_id, $name, $description, $price, $category_id){
+            $statement = DBConnection::$connection->prepare("UPDATE products SET
+             name = :name, description = :description, price = :price, category_id = :category_id WHERE product_id = :product_id");
+
+            $statement->bindParam(':product_id',$product_id);
+            $statement->bindParam(':name',$name);
+            $statement->bindParam(':description',$description);
+            $statement->bindParam(':price',$price);
+            $statement->bindParam(':category_id',$category_id);
+            $success = $statement->execute();
+
+            if(!$success){
+                echo "Error updating products";
+            }
+
+        }
     }

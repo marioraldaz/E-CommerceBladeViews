@@ -10,13 +10,10 @@
     $cache = '../cache';
     $blade = new Blade($views, $cache);
     $products = Product::getProducts();
-    $categories = Category::getCategories();
-    $newCategories=[];
-    foreach ($categories as $category){
-        $newCategories[$category['category_id']] = $category['name'];
-    }
-
-    echo $blade->view()->make('viewProducts', ['categories'=>$newCategories,'products'=>$products])->render();
+    $categories = Category::getCategoriesAssociative();
+  
+    var_dump($categories);
+    echo $blade->view()->make('viewProducts', ['categories'=>$categories,'products'=>$products])->render();
     if(isset($_POST['submit'])){
         $product = new Product($_POST['name'], $_POST['description'], 
         $_POST['price'], $_POST['category_id']);

@@ -23,7 +23,7 @@
                     <td>{{ $categories["$product[category_id]"] }}</td>
                     <td>No Image</td>
                     <td>{{ $product['created_at'] }}</td>
-                    <td><a href="./modifyProduct">Modify Product</a></td>
+                    <td><a href="./modifyProduct?id={{ $product['product_id'] }}>">Modify Product</a></td>
                 </tr>
             @endforeach
         </table>
