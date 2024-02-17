@@ -59,3 +59,75 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+/* Style form elements */
+input[type=text],
+input[type=email],
+input[type=password],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Change submit button background color on hover */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a grey background color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+}
+
+/* Float cancel and submit buttons and add some spacing */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+  margin: 0 5px;
+}
+
+/* Clear floats after the form */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add padding to the form elements */
+input[type=text],
+input[type=email],
+input[type=password],
+select,
+textarea {
+  padding: 10px;
+}
+
+/* Style the form header */
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style form error messages */
+.error {
+  color: red;
+  font-size: 12px;
+}
+

@@ -12,7 +12,6 @@
     $products = Product::getProducts();
     $categories = Category::getCategoriesAssociative();
   
-    var_dump($categories);
     echo $blade->view()->make('viewProducts', ['categories'=>$categories,'products'=>$products])->render();
     if(isset($_POST['submit'])){
         $product = new Product($_POST['name'], $_POST['description'], 

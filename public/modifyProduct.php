@@ -17,6 +17,5 @@
     echo $blade->view()->make('viewModifyProduct',['categories'=>$categories,'product'=>$product])->render();
 
     if(isset($_POST['submit'])){
-        var_dump($_POST);
         Product::updateProduct($_POST['product_id'],$_POST['name'], $_POST['description'], $_POST['price'], $_POST['category_id']);
     }

@@ -37,7 +37,6 @@ class DBConnection {
           echo "<h2>No existe la base de datos, creándola</h2>";
           $connection = new PDO($this->db, $this->user, $this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
           $query = $connection->prepare("CREATE DATABASE IF NOT EXISTS $this->db_name COLLATE utf8_spanish_ci");
-          var_dump($query);
           $query->execute();
 
           if($query){
