@@ -10,7 +10,7 @@
     $blade = new Blade($views, $cache);
 
     if(isset($_POST['submit'])){
-        $product = new Product($_POST['name'], $_POST['description'], 
+        $type = new Product($_POST['name'], $_POST['description'], 
         $_POST['price'], $_POST['category_id']);
-        $product->insert();
+        $type->insert();
     }

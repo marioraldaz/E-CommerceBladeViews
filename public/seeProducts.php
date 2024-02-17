@@ -11,7 +11,7 @@
     echo $blade->view()->make('viewProducts', ['titulo'=>'Gestionar Libros'])->render();
 
     if(isset($_POST['submit'])){
-        $product = new Product($_POST['name'], $_POST['description'], 
+        $type = new Product($_POST['name'], $_POST['description'], 
         $_POST['price'], $_POST['category_id']);
 
     }

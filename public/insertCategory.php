@@ -9,10 +9,12 @@
         $views = '../views';
         $cache = '../cache';
         $blade = new Blade($views, $cache);
-    
-        echo $blade->view()->make('viewInsertType', ['titulo'=>'Gestionar Libros'])->render();
+        $types = Category::getTypes();
+        var_dump($types);
+        echo $blade->view()->make('viewInsertCategory',['types'=>$types])->render();
 
         if(isset($_POST['submit'])){
-            $type = new Category($_POST['name']);
+            $type = new Category($_POST['name'],$_POST['parent_category_id']);
+            echo "aaaa";
             $type->insert();
         }

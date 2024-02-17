@@ -1,11 +1,11 @@
 <?php $__env->startSection('title', $titulo); ?>
 
 <?php $__env->startSection('content'); ?>
-    <form action="process_category_form.php" method="post">
+    <form action="" method="post">
         <label for="name">Type Name:</label><br>
         <input type="text" id="name" name="name"><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit">
     </form>
 <?php $__env->stopSection(); ?>
 

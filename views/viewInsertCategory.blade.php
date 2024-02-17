@@ -3,13 +3,17 @@
 @section('title')
 
 @section('content')
-    <form action="process_category_form.php" method="post">
+    <form action="" method="post">
         <label for="name">Category Name:</label><br>
         <input type="text" id="name" name="name"><br>
 
         <label for="parent_category_id">Type of product:</label><br>
-        <input type="number" id="parent_category_id" name="parent_category_id"><br>
+        <select name="parent_category_id" id="parent_category_id">
+            @foreach ($types as $type)
+                <option value="{{ $type['category_id'] }}">{{ $type['name'] }}</option>
+            @endforeach
+        </select>
 
-        <input type="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit">
     </form>
 @endsection

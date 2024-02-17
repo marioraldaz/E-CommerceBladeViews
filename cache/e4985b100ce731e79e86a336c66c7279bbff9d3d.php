@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="../global.css" type="text/css">
-    <title>App Name - <?php echo $__env->yieldContent('title'); ?></title>
+    <title>E-Commerce - <?php echo $__env->yieldContent('title'); ?></title>
 </head>
 
 <body>
