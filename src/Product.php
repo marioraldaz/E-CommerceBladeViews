@@ -1,6 +1,7 @@
 <?php
 namespace Mario\Commerce;
 use Mario\Commerce\DBConnection;
+use PDO;
     Class Product extends DBConnection{
         public $name;
         public $description;
@@ -28,13 +29,13 @@ use Mario\Commerce\DBConnection;
              }    
         }
 
-        public function getProducts(){
+        public static function getProducts(){
             $statement = DBConnection::$connection->prepare("SELECT * FROM products");
             $success = $statement->execute();
             if(!$success){
                 echo "Error getting products";
             }
-            $result = $statement->fetchAll();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             return $result;    
         }
     }
